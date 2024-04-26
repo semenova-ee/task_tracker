@@ -2,7 +2,6 @@ version: "3"
 
 services:
   db:
-    container_name: db
     image: postgres:16-alpine
     env_file:
       - .env
@@ -23,10 +22,9 @@ services:
 
   app:
     build: .
-    tty: true
 #      context: .
 #      dockerfile: Dockerfile
-#    container_name: task_tracker
+    tty: true
 #    env_file:
 #      - .env
     ports:
