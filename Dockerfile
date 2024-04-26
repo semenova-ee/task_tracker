@@ -1,9 +1,17 @@
-FROM python:3
+# Используем базовый образ Python
+FROM python:3.11-slim
 
-WORKDIR /katya_dip
+# Устанавливаем рабочую директорию в контейнере
+WORKDIR /app
 
-COPY reqs.txt .
+# Копируем зависимости в контейнер
+COPY ./reqs.txt /app/
 
-RUN pip install --no-cache-dir -r reqs.txt
+# Устанавливаем зависимости
+RUN pip install -r /app/reqs.txt
 
+# Копируем код приложения в контейнер
 COPY . .
+
+# Команда для запуска приложения при старте контейнера
+# CMD ["python", "manage.py", "runserver"]
