@@ -108,7 +108,7 @@ http://localhost:8000/swagger/
 
 ### Docker
 
-- Описан Dockerfile для fastapi-приложения
+- Описан Dockerfile для django-приложения
 - Создан docker-compose для всех сервисов, необходимых для запуска приложения
 (django-приложение, postgresql для основной БД)
 
