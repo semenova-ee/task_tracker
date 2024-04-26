@@ -2,9 +2,8 @@ from rest_framework import routers
 from .views import TaskViewSet
 
 router = routers.SimpleRouter()
-router.register(r'tasks', TaskViewSet)
+router.register(r"", TaskViewSet)
 
-urlpatterns = [
-]
+urlpatterns = []
 
 urlpatterns += router.urls
