@@ -5,13 +5,14 @@ FROM python:3.11-slim
 WORKDIR /app
 
 # Копируем зависимости в контейнер
-COPY ./reqs.txt /app/
+COPY ./reqs.txt .
 
 # Устанавливаем зависимости
-RUN pip install -r /app/reqs.txt
+RUN pip install -r reqs.txt
 
 # Копируем код приложения в контейнер
 COPY . .
 
+EXPOSE 8000
 # Команда для запуска приложения при старте контейнера
 # CMD ["python", "manage.py", "runserver"]
